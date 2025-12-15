@@ -157,6 +157,15 @@ For a simple standalone build, you'll need to:
 These hash implementations are part of hashcat and are licensed under the MIT license.  
 See `docs/credits.txt` in the main hashcat directory for full credits and license information.
 
+## Examples
+
+See [USAGE_EXAMPLES.md](USAGE_EXAMPLES.md) for detailed usage examples including:
+- How to list and extract hash functions
+- How to benchmark specific algorithms
+- How to compare multiple hash functions
+- How to integrate with your own code
+- And more!
+
 ## Support
 
 For questions about the hash implementations, refer to:
@@ -164,3 +173,20 @@ For questions about the hash implementations, refer to:
 - [Hashcat GitHub](https://github.com/hashcat/hashcat)
 - [Hashcat Forums](https://hashcat.net/forum/)
 - [Hashcat Wiki](https://hashcat.net/wiki/)
+
+## Summary
+
+This standalone hash extraction utility provides:
+- ✅ 20 hash algorithm implementations extracted from hashcat
+- ✅ Easy-to-use extraction scripts
+- ✅ Benchmarking scripts for performance testing
+- ✅ Comprehensive documentation
+- ✅ Makefile for automation
+- ✅ No need to run full hashcat for individual hash testing
+
+Perfect for developers who want to:
+- Study hash algorithm implementations
+- Benchmark specific hash functions
+- Test hash performance without GPU setup
+- Learn cryptographic algorithms
+- Extract hash code for educational purposes
