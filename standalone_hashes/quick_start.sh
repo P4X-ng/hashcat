@@ -40,14 +40,18 @@ echo ""
 # Step 3: Show what was extracted
 echo -e "${GREEN}Step 3: Showing extracted files...${NC}"
 echo ""
-echo "Header files (.h):"
-ls -1 hashes/*.h | wc -l
-echo ""
-echo "Implementation files (.cl):"
-ls -1 hashes/*.cl | wc -l
-echo ""
-echo "Sample files:"
-ls hashes/*.h | head -5
+if [ -d "hashes" ] && [ -n "$(ls -A hashes 2>/dev/null)" ]; then
+  echo "Header files (.h):"
+  find hashes -name "*.h" -type f | wc -l
+  echo ""
+  echo "Implementation files (.cl):"
+  find hashes -name "*.cl" -type f | wc -l
+  echo ""
+  echo "Sample files:"
+  find hashes -name "*.h" -type f | head -5
+else
+  echo -e "${YELLOW}No files found in hashes directory.${NC}"
+fi
 echo ""
 read -p "Press Enter to continue..."
 echo ""
@@ -55,8 +59,12 @@ echo ""
 # Step 4: Examine a hash function
 echo -e "${GREEN}Step 4: Examining MD5 hash function...${NC}"
 echo ""
-echo "MD5 header file (first 30 lines):"
-head -30 hashes/inc_hash_md5.h
+if [ -f "hashes/inc_hash_md5.h" ]; then
+  echo "MD5 header file (first 30 lines):"
+  head -30 hashes/inc_hash_md5.h
+else
+  echo -e "${YELLOW}MD5 header file not found. Please run extraction first.${NC}"
+fi
 echo ""
 read -p "Press Enter to continue..."
 echo ""

@@ -26,6 +26,12 @@ count=0
 echo -e "${GREEN}Hash Algorithm${NC}              ${YELLOW}Header File${NC}                ${YELLOW}Implementation File${NC}"
 echo "--------------------------------------------------------------------------------"
 
+# Check if any hash files exist
+if ! ls "$OPENCL_DIR"/inc_hash_*.h 1> /dev/null 2>&1; then
+  echo -e "${YELLOW}No hash header files found in $OPENCL_DIR${NC}"
+  exit 1
+fi
+
 # List all hash functions
 for header in "$OPENCL_DIR"/inc_hash_*.h; do
   if [ -f "$header" ]; then
