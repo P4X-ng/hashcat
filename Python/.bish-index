@@ -1,0 +1,5 @@
+./generic_hash_sp.py
+./hcshared.py
+./hcmp.py
+./generic_hash_mp.py
+./hcsp.py

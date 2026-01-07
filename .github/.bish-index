@@ -1,0 +1,7 @@
+./workflows/hashcat-example-hashes_machine-readable2md.py
+./workflows/generate_docs.sh
+./workflows/hashcat-example-hashes_md2docuwiki.sh
+./ISSUE_TEMPLATE/feature_request_-_add_new_algorithm.md
+./ISSUE_TEMPLATE/bug_report.md
+./ISSUE_TEMPLATE/other_issue.md
+./ISSUE_TEMPLATE/feature_request_-_other.md
